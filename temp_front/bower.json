@@ -1,0 +1,16 @@
+{
+  "name": "temp_front",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ayoobembe/insta_clone",
+  "authors": [
+    "danielobembe <ayo.obembe@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
