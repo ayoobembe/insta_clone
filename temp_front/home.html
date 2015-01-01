@@ -4,10 +4,12 @@
 		<meta charset='utf-8'>
 		<title>InstaClone</title>
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="./css/home.css">
 		<script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/ng-flow/dist/ng-flow-standalone.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="app.js"> </script>
 
 	</head>
@@ -15,8 +17,52 @@
 	<body ng-app="instaClone" ng-controller="MainController" flow-init>
 
 		<div class='page-header text-center'>
-			<h1>Instaclone</h1>
+			<div class='headTop' id="topHead">
+				<h3>Instaclone</h3>
+				<ul class="nav nav-tabs">
+					<li role="presentation" class="active">
+						<a href="#">Home</a>
+					</li>
+
+					<li role="presentation" class="btn-group">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Profile
+							</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href='#'>View Profile</a></li>
+							<li><a href='#'>Edit Profile</a></li>
+							<li><a href='#'>Badges</a></li>
+							<li><a href='#'>Log Out</a></li>
+						</ul>							
+					</li>
+				</ul>
+			</div>
+			<div><p>5 new updates</p></div>
 		</div>
+
+
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+
+				<ul class="list-group">
+		    	<img ng-repeat="file in $flow.files" flow-img="file" class="list-group-item"/>
+				</ul>
+
+				<input flow-btn flow-file-added type='submit' value='Post' class='btn btn-primary btn-lg btn-block' ng-submit=""/>
+
+			</div>
+		</div>
+
+
+	</body>
+
+</html>
+
+
+
+
+
+
 
 	<!--	
 		<div class="row">
@@ -33,28 +79,3 @@
 			</div>
 		</div>
   -->
-
-
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-
-				<ul class="list-group">
-		    	<img ng-repeat="file in $flow.files" flow-img="file" class="list-group-item"/>
-				</ul>
-
-				<input flow-btn flow-file-added type='submit' value='Post' class='btn btn-primary btn-lg btn-block' ng-submit=""/>
-
-			</div>
-		</div>
-
-
-
-
-
-
-
-
-
-	</body>
-
-</html>
