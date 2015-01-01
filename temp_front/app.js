@@ -1,4 +1,4 @@
-angular.module('instaClone', [])
+angular.module('instaClone', ['flow'])
 
 .controller('MainController',[
 	'$scope',
@@ -8,4 +8,10 @@ angular.module('instaClone', [])
 			var n = $scope.items.length + 1;
 			$scope.items.push('Item ' + n);
 		};
+
+		$scope.pictures = [];
+		$scope.$on('flow::fileAdded', function(event, $flow, flowFile){
+		
+		});
+
 	}]);
