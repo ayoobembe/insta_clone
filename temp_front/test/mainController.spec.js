@@ -19,3 +19,25 @@ describe('MainController', function(){
 	});
 
 });
+
+
+describe('adding an item to list of items displayed on page', function(){
+
+	beforeEach(module('instaClone'));
+
+	var scope, ctrl;
+
+	beforeEach(inject(function($rootScope, $controller) {
+		scope = $rootScope.$new();
+		ctrl = $controller('MainController', {
+			$scope: scope
+		});
+	}));
+
+	var page = require('webpage').create();
+	page.open('home.html', function() {
+		console.log("phantom of the opera");
+		phantom.exit();
+	});
+
+});

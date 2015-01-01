@@ -10,7 +10,7 @@ module.exports = function(config) {
       'js/**/*.js',
       'test/**/*.spec.js',
       'app.js',
-      '*.js'		
+      '*.js',
 		],
 		exclude: [],
 		preprocessors: {},
