@@ -11,7 +11,7 @@ angular.module('instaClone', ['flow'])
 
 		$scope.pictures = [];
 		$scope.$on('flow::fileAdded', function(event, $flow, flowFile){
-		
+			$scope.pictures = $scope.$flow.files;
 		});
 
 	}]);
