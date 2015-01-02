@@ -45,7 +45,13 @@
 			<div class="col-md-6 col-md-offset-3">
 
 				<ul class="list-group">
-		    	<img ng-repeat="file in $flow.files" flow-img="file" class="list-group-item"/>
+					<li class="list-group-item" ng-repeat="file in $flow.files">
+						<div class="img-contain"  > 
+		    			<div class="img">
+		    				<img class="my_img" flow-img="file" />
+		    			</div>
+						</div>
+					</li>
 				</ul>
 
 				<input flow-btn flow-file-added type='submit' value='Post' class='btn btn-primary btn-lg btn-block' ng-submit=""/>
